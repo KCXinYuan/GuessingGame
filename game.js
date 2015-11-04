@@ -1,6 +1,9 @@
 var a = 0
 var b = 0
 var c = 0
+var d = 0
+var e = 0
+var f = 0
 
 var name = prompt("What is your name?");
 alert("How's it going " + name + "? How about we play a guessing game?");
@@ -57,8 +60,23 @@ else {
 var questionFour = Number(prompt('What is my age?'));
 if(questionFour === 25){
   console.log('User entered ' + questionFour + " as their answer to question four");
+  alert("Your answer was " + questionFour);
+  alert("That's right " + name + "!" + " " + "I am 25 years old!");
+  d = 1
 }
-else if()
+else if(questionFour < 25){
+  console.log('User entered ' + questionFour + " as their answer to question four");
+  alert("Your answer was " + questionThree);
+  alert("Sorry " + name + ", you guessed too low!");
+}
+else if(questionFour > 25){
+  console.log('User entered ' + questionFour + " as their answer to question four");
+  alert("Your answer was " + questionThree);
+  alert("Sorry " + name + ", you guessed too high!");
+}
+else{
+  alert("Sorry, that answer doesn't work");
+}
 
 function total(a,b,c){
  return a+b+c;
