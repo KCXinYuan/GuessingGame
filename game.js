@@ -57,7 +57,7 @@ else {
   alert("Sorry, that answer doesn't work");
 
 }
-var questionFour = Number(prompt('What is my age?'));
+var questionFour = parseInt(prompt('What is my age?'));
 if(questionFour === 25){
   console.log('User entered ' + questionFour + " as their answer to question four");
   alert("Your answer was " + questionFour);
@@ -66,19 +66,19 @@ if(questionFour === 25){
 }
 else if(questionFour < 25){
   console.log('User entered ' + questionFour + " as their answer to question four");
-  alert("Your answer was " + questionThree);
+  alert("Your answer was " + questionFour);
   alert("Sorry " + name + ", you guessed too low!");
 }
 else if(questionFour > 25){
   console.log('User entered ' + questionFour + " as their answer to question four");
-  alert("Your answer was " + questionThree);
+  alert("Your answer was " + questionFour);
   alert("Sorry " + name + ", you guessed too high!");
 }
 else{
   alert("Sorry, that answer doesn't work");
 }
 
-function total(a,b,c){
- return a+b+c;
+function total(a,b,c,d,e,f){
+ return a+b+c+d+e+f;
 }
-alert("You got " + total(a,b,c) + " out of 3 correct!")
+alert("You got " + total(a,b,c,d,e,f) + " out of 6 correct!")
