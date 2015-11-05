@@ -94,6 +94,24 @@ else {
   alert("Sorry, that answer doesn't work");
 }
 
+var questionSix = prompt("Do I prefer salty food over sweet?");
+if(questionSix === "yes"||questionSix === "Yes"||questionSix === "Y"||questionSix === "y"){
+  console.log('User entered ' + questionSix + ' as their answer to question six; Right')
+  alert("Your answer was " + questionSix);
+  alert("That's right " + name + "!" + " " + "I would rather have something salty rather than dessert.");
+  var f=1
+
+}
+else if(questionSix === "no"||questionSix === "No"||questionSix === "n"||questionSix === "N") {
+  console.log('User entered ' + questionSix + ' as their answer to question six; Wrong')
+  alert("Your answer was " + questionSix);
+  alert("Sorry " + name + ", I prefer salty foods over sweets.");
+}
+else {
+  alert("Sorry, that answer doesn't work");
+
+}
+
 function total(a,b,c,d,e,f){
  return a+b+c+d+e+f;
 }
