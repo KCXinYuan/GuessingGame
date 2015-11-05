@@ -22,6 +22,7 @@ else if(questionOne === "no"||questionOne === "No"||questionOne === "n"||questio
 }
 else {
   alert("Sorry, that answer doesn't work");
+  console.log('No/wrong answer entered');
 }
 
 var questionTwo = prompt("Do I work at night?");
@@ -39,7 +40,7 @@ else if(questionTwo === "no"||questionTwo === "No"||questionTwo === "n"||questio
 }
 else {
   alert("Sorry, that answer doesn't work");
-
+  console.log('No/wrong answer entered');
 }
 var questionThree = prompt("Am I originally from Seattle?");
 if(questionThree === "no"||questionThree === "No"||questionThree === "n"||questionThree === "N") {
@@ -55,7 +56,7 @@ else if(questionThree === "yes"||questionThree === "Yes"||questionThree === "Y"|
 }
 else {
   alert("Sorry, that answer doesn't work");
-
+  console.log('No/wrong answer entered');
 }
 var questionFour = parseInt(prompt('What is my age?'));
 if(questionFour === 25){
@@ -76,6 +77,7 @@ else if(questionFour > 25){
 }
 else{
   alert("Sorry, that answer doesn't work");
+  console.log('No/wrong answer entered');
 }
 
 var questionFive = prompt("Do I like licorice flavored licorice?");
@@ -92,24 +94,29 @@ else if(questionFive === "yes"||questionFive === "Yes"||questionFive === "Y"||qu
 }
 else {
   alert("Sorry, that answer doesn't work");
+  console.log('No/wrong answer entered');
 }
 
-var questionSix = prompt("Do I prefer salty food over sweet?");
-if(questionSix === "yes"||questionSix === "Yes"||questionSix === "Y"||questionSix === "y"){
-  console.log('User entered ' + questionSix + ' as their answer to question six; Right')
+var questionSix = parseInt(prompt('What day in March is my birthday?'));
+if(questionSix === 15){
+  console.log('User entered ' + questionSix + " as their answer to question six; Right");
   alert("Your answer was " + questionSix);
-  alert("That's right " + name + "!" + " " + "I would rather have something salty rather than dessert.");
-  var f=1
-
+  alert("That's right " + name + "!" + " " + "I was born on the Ides of March!");
+  f = 1
 }
-else if(questionSix === "no"||questionSix === "No"||questionSix === "n"||questionSix === "N") {
-  console.log('User entered ' + questionSix + ' as their answer to question six; Wrong')
+else if(questionSix < 15){
+  console.log('User entered ' + questionSix + " as their answer to question six; Wrong");
   alert("Your answer was " + questionSix);
-  alert("Sorry " + name + ", I prefer salty foods over sweets.");
+  alert("Sorry " + name + ", you guessed too low!");
 }
-else {
+else if(questionSix > 15){
+  console.log('User entered ' + questionSix + " as their answer to question six; Wrong");
+  alert("Your answer was " + questionSix);
+  alert("Sorry " + name + ", you guessed too high!");
+}
+else{
   alert("Sorry, that answer doesn't work");
-
+  console.log('No/wrong answer entered');
 }
 
 function total(a,b,c,d,e,f){
