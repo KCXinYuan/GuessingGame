@@ -1,63 +1,85 @@
-var a = 0
-var b = 0
-var c = 0
-var d = 0
-var e = 0
-var f = 0
+var a = 0;
+var b = 0;
+var c = 0;
+var d = 0;
+var e = 0;
+var f = 0;
+var w = null;
+
+function question(x,y,z){
+	//x=user input y=yes/no/num z=counter
+	if(y==="yes"){
+		if(x === "yes"||x === "Yes"||x === "Y"||x === "y") {
+		  console.log('User entered ' + x + ' as their answer to question one; Right');
+		  alert("Your answer was " + x);
+		  z=1;
+		  return true;
+		}
+		else if(x === "no"||x === "No"||x === "n"||x === "N") {
+		  console.log('User entered ' + x + ' as their answerto question one; Wrong');
+		  alert("Your answer was " + x);
+		  return false;
+		}
+		else {
+		  alert("Sorry, that answer doesn't work");
+		  console.log('No/wrong answer entered');
+		}
+	}
+	else if(y==="no"){
+		if(x === "no"||x === "No"||x === "n"||x === "N") {
+		  console.log('User entered ' + x + ' as their answer to question one; Right');
+		  alert("Your answer was " + x);
+		  z=1;
+		  return true;
+		}
+		else if(x === "yes"||x === "Yes"||x === "Y"||x === "y") {
+		  console.log('User entered ' + x + ' as their answerto question one; Wrong');
+		  alert("Your answer was " + x);
+		  return false;
+		}
+		else {
+		  alert("Sorry, that answer doesn't work");
+		  console.log('No/wrong answer entered');
+		}
+	}
+	else if(y==="num"){
+	}
+}
 
 var name = prompt("What is your name?");
 alert("How's it going " + name + "? How about we play a guessing game?");
 
+//QUESTION 1
 var questionOne = prompt("Do I play video games?");
-if(questionOne === "yes"||questionOne === "Yes"||questionOne === "Y"||questionOne === "y") {
-  console.log('User entered ' + questionOne + ' as their answer to question one; Right')
-  alert("Your answer was " + questionOne);
-  alert("That's right " + name + "!" + " " + "I love to play video games!")
-  var a=1
+w=question(questionOne,"yes",a);
+if(w===true){
+  alert("That's right " + name + "!" + " " + "I love to play video games!");
 }
-else if(questionOne === "no"||questionOne === "No"||questionOne === "n"||questionOne === "N") {
-  console.log('User entered ' + questionOne + ' as their answerto question one; Wrong')
-  alert("Your answer was " + questionOne);
+else if(w===false){
   alert("Sorry " + name + ", that's incorrect. I play games very often.");
 }
-else {
-  alert("Sorry, that answer doesn't work");
-  console.log('No/wrong answer entered');
-}
 
+//QUESTION 2
 var questionTwo = prompt("Do I work at night?");
-if(questionTwo === "yes"||questionTwo === "Yes"||questionTwo === "Y"||questionTwo === "y"){
-  console.log('User entered ' + questionTwo + ' as their answer to question two; Right')
-  alert("Your answer was " + questionTwo);
-  alert("That's right " + name + "!" + " " + "I am a vampire and work night shift!");
-  var b=1
+w=question(questionTwo,"yes",b);
+if(w===true){
+	alert("That's right " + name + "!" + " " + "I am a vampire and work night shift!");
+}
+else if(w===false){
+	alert("Sorry " + name + ", I wish you were correct. Unfortunately I work night shift.");
+}
 
-}
-else if(questionTwo === "no"||questionTwo === "No"||questionTwo === "n"||questionTwo === "N") {
-  console.log('User entered ' + questionTwo + ' as their answer to question two; Wrong')
-  alert("Your answer was " + questionTwo);
-  alert("Sorry " + name + ", I wish you were correct. Unfortunately I work night shift.");
-}
-else {
-  alert("Sorry, that answer doesn't work");
-  console.log('No/wrong answer entered');
-}
+//QUESTION 3
 var questionThree = prompt("Am I originally from Seattle?");
-if(questionThree === "no"||questionThree === "No"||questionThree === "n"||questionThree === "N") {
-  console.log('User entered ' + questionThree + ' as their answer to question three; Right')
-  alert("Your answer was " + questionThree);
+w=question(questionThree,"no",c);
+if(w===true){
   alert("That's right " + name + "!" + " " + "I was from Burlington, North Carolina before I came to Seattle.");
-  var c=1
 }
-else if(questionThree === "yes"||questionThree === "Yes"||questionThree === "Y"||questionThree === "y") {
-  console.log('User entered ' + questionThree + ' as their answer to question three; Wrong')
-  alert("Your answer was " + questionThree);
+else if(w===false){
   alert("Sorry " + name + ". " +"I am not originally from Seattle, Washington.")
 }
-else {
-  alert("Sorry, that answer doesn't work");
-  console.log('No/wrong answer entered');
-}
+
+//QUESTION 4
 var questionFour = parseInt(prompt('What is my age?'));
 if(questionFour === 25){
   console.log('User entered ' + questionFour + " as their answer to question four; Right");
@@ -80,23 +102,16 @@ else{
   console.log('No/wrong answer entered');
 }
 
+//QUESTION 5
 var questionFive = prompt("Do I like licorice flavored licorice?");
-if(questionFive === "no"||questionFive === "No"||questionFive === "n"||questionFive === "N") {
-  console.log('User entered ' + questionFive + ' as their answer to question five; Right')
-  alert("Your answer was " + questionFive);
+w=question(questionFive,"no",e);
+if(w===true){
   alert("That's right " + name + "!" + " " + "I like licorice type candy, but I'm not fond of the true licorice flavor.");
-  var e=1
 }
-else if(questionFive === "yes"||questionFive === "Yes"||questionFive === "Y"||questionFive === "y") {
-  console.log('User entered ' + questionFive + ' as their answer to question five; Wrong')
-  alert("Your answer was " + questionFive);
+else if(w===false){
   alert("Sorry " + name + ". " +"I don't prefer the licorice flavor.")
 }
-else {
-  alert("Sorry, that answer doesn't work");
-  console.log('No/wrong answer entered');
-}
-
+//QUESTION 6
 var questionSix = parseInt(prompt('What day in March is my birthday?'));
 if(questionSix === 15){
   console.log('User entered ' + questionSix + " as their answer to question six; Right");
