@@ -1,5 +1,8 @@
 The Best Guessing Game in the Entire World
 Kevin Chuang
+Super "pear" programmers:
+Driver fruit: Tomi Inouye
+Navigator fruit: Kevin Chuang
 
 This code is the best code in the world. It utilizes both HTML and JavaScript to create a super awesome guessing game about none other than me, the programmer! Multiple questions will trick and stump the user while teaching them a thing or two about me, myself, and I.
 
@@ -9,7 +12,7 @@ This code has a metric butt ton of features like:
 
 -Looking for those sweet if/else if/else statements? This code is choc full of them!
 
-if(user === "happy"){                  ****Do not run this code, it does absolutely nothing.
+if(user === "happy"){                 ****Do not run this code, it does absolutely nothing.
 
 alert("Mission Accomplished!");
 execute(Sweetfanfare.exe);
