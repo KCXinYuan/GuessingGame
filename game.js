@@ -5,18 +5,28 @@ var d = 0;
 var e = 0;
 var f = 0;
 var w = null;
-
+var questionArray = [
+"What is your name?",
+"Do I play video games?",
+"Do I work at night?",
+"Am I originally from Seattle?",
+"What is my age?",
+"Do I like licorice flavored licorice?",
+"What day in March is my birthday?"
+];
+var image = function (a) {
+  document.getElementById(a);
+}
 function question(x,y,z){
-	//x=user input y=yes/no/num z=innerHTML reference
+	//x=user input y=yes/no/num z=innerHTML reference i=imgtag
 	if(y==="yes"){
 		if(x === "yes"||x === "Yes"||x === "Y"||x === "y") {
 		  console.log('User entered ' + x + ' as their answer to question one; Right');
 		  alert("Your answer was " + x);
-		  z=1;
 		  return true;
 		}
 		else if(x === "no"||x === "No"||x === "n"||x === "N") {
-		  console.log('User entered ' + x + ' as their answerto question one; Wrong');
+		  console.log('User entered ' + x + ' as their answer to question one; Wrong');
 		  alert("Your answer was " + x);
 		  return false;
 		}
@@ -29,11 +39,10 @@ function question(x,y,z){
 		if(x === "no"||x === "No"||x === "n"||x === "N") {
 		  console.log('User entered ' + x + ' as their answer to question one; Right');
 		  alert("Your answer was " + x);
-		  z=1;
 		  return true;
 		}
 		else if(x === "yes"||x === "Yes"||x === "Y"||x === "y") {
-		  console.log('User entered ' + x + ' as their answerto question one; Wrong');
+		  console.log('User entered ' + x + ' as their answer to question one; Wrong');
 		  alert("Your answer was " + x);
 		  return false;
 		}
@@ -47,7 +56,6 @@ function question(x,y,z){
       console.log('User entered ' + x + " as their answer to question four; Right");
       alert("Your answer was " + x);
       return true;
-      z = 1;
 
     }
     else if(x < y){
@@ -69,68 +77,88 @@ function question(x,y,z){
 	}
 }
 
-var name = prompt("What is your name?");
+var name = prompt(questionArray[0]);
 alert("How's it going " + name + "? How about we play a guessing game?");
 
 //QUESTION 1
-var questionOne = prompt("Do I play video games?");
-w=question(questionOne,"yes",'qOne');
+var questionOne = prompt(questionArray[1]);
+w=question(questionOne,"yes",'qOne','imgOne');
 if(w===true){
   document.getElementById('qOne').innerHTML= "That's right " + name + "!" + " " + "I love to play video games!";
+  document.getElementById('imgOne').src= "img/check.jpg";
   a=1;
 }
 else if(w===false){
   document.getElementById('qOne').innerHTML="Sorry " + name + ", that's incorrect. I play games very often.";
+  document.getElementById('imgOne').src= "img/cross.jpg";
+
 }
 
 //QUESTION 2
-var questionTwo = prompt("Do I work at night?");
+var questionTwo = prompt(questionArray[2]);
 w=question(questionTwo,"yes",'qTwo');
 if(w===true){
 	document.getElementById('qTwo').innerHTML="That's right " + name + "!" + " " + "I am a vampire and work night shift!";
+  document.getElementById('imgTwo').src= "img/check.jpg";
   b=1;
 }
 else if(w===false){
 	document.getElementById('qTwo').innerHTML="Sorry " + name + ", I wish you were correct. Unfortunately I work night shift.";
+  document.getElementById('imgTwo').src= "img/cross.jpg";
+
 }
 
 //QUESTION 3
-var questionThree = prompt("Am I originally from Seattle?");
-w=question(questionThree,"no",'qThree');
+var questionThree = prompt(questionArray[3]);
+w=question(questionThree,"no",'qThree','imgOne');
 if(w===true){
   document.getElementById('qThree').innerHTML="That's right " + name + "!" + " " + "I was from Burlington, North Carolina before I came to Seattle.";
+  document.getElementById('imgThree').src= "img/check.jpg";
   c=1;
 }
 else if(w===false){
   document.getElementById('qThree').innerHTML="Sorry " + name + ". " +"I am not originally from Seattle, Washington."
+  document.getElementById('imgThree').src= "img/cross.jpg";
+
 }
 
 //QUESTION 4
-var questionFour = parseInt(prompt('What is my age?'));
+var questionFour = parseInt(prompt(questionArray[4]));
 
 w=question(questionFour,25,'qFour');
 if(w === true){
   document.getElementById('qFour').innerHTML="That's right " + name + "!" + " " + "I am 25 years old!";
+  document.getElementById('imgFour').src= "img/check.jpg";
   d = 1;
 }
 
+else {
+ document.getElementById('imgFour').src= "img/cross.jpg";
+}
+
 //QUESTION 5
-var questionFive = prompt("Do I like licorice flavored licorice?");
+var questionFive = prompt(questionArray[5]);
 w=question(questionFive,"no",'qFive');
 if(w===true){
   document.getElementById('qFive').innerHTML="That's right " + name + "!" + " " + "I like licorice type candy, but I'm not fond of the true licorice flavor.";
+  document.getElementById('imgFive').src= "img/check.jpg";
   e=1;
 }
 else if(w===false){
   document.getElementById('qFive').innerHTML="Sorry " + name + ". " +"I don't prefer the licorice flavor."
+  document.getElementById('imgFive').src= "img/cross.jpg";
 }
 
 //QUESTION 6
-var questionSix = parseInt(prompt('What day in March is my birthday?'));
+var questionSix = parseInt(prompt(questionArray[6]));
 w=question(questionSix,15,'qSix');
 if(w === true){
   document.getElementById('qSix').innerHTML="That's right " + name + "!" + " " + "I was born on the Ides of March!";
+  document.getElementById('imgSix').src= "img/check.jpg";
   f = 1;
+}
+else {
+  document.getElementById('imgSix').src= "img/cross.jpg";
 }
 
 function total(a,b,c,d,e,f){
