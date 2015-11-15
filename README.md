@@ -1,6 +1,8 @@
 The Best Guessing Game in the Entire World
 Kevin Chuang
+
 Super "pear" programmers:
+
 Driver fruit: Tomi Inouye
 Navigator fruit: Kevin Chuang
 
